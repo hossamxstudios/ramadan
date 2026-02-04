@@ -15,7 +15,7 @@
                                     <a href="{{ route('login') }}" class="logo-dark">
                                         <span class="gap-1 d-flex align-items-center">
                                             <img src="{{ asset('logo.webp') }}" alt="" class="w-25 rounded-circle">
-                                            <span class="logo-text text-body fw-bold fs-xl">New Cairo Archive System</span>
+                                            <span class="logo-text text-body fw-bold fs-xl">10<sup>th</sup> of Ramadan City Archive System</span>
                                         </span>
                                     </a>
                                     <a href="{{ route('login') }}" class="logo-light">
@@ -25,7 +25,7 @@
                                                     <i data-lucide="sparkles" class="fs-md"></i>
                                                 </span>
                                             </span>
-                                            <span class="text-white logo-text fw-bold fs-xl">Biry Suits</span>
+                                            <span class="text-white logo-text fw-bold fs-xl">10<sup>th</sup> of Ramadan City Archive System</span>
                                         </span>
                                     </a>
                                     <p class="mt-3 text-muted w-lg-75">Let’s get you signed in. Enter your email and password to continue.</p>

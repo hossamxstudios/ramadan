@@ -23,7 +23,7 @@
                                             </span> --}}
                                             <img src="{{ asset('logo.webp') }}" alt="" class="w-25 rounded-circle">
 
-                                            <span class="logo-text text-body fw-bold fs-xl">New Cairo Archive System</span>
+                                            <span class="logo-text text-body fw-bold fs-xl">10 th of Ramadan Archive System</span>
                                         </span>
                                     </a>
                                     <a href="{{ route('login') }}" class="logo-light">
@@ -33,10 +33,10 @@
                                                     <i data-lucide="sparkles" class="fs-md"></i>
                                                 </span>
                                             </span>
-                                            <span class="text-white logo-text fw-bold fs-xl">Biry Suits</span>
+                                            <span class="text-white logo-text fw-bold fs-xl">10 th of Ramadan Archive System</span>
                                         </span>
                                     </a>
-                                    <p class="mt-3 text-muted w-lg-75">Create your Biry Suits account to manage access and enjoy the
+                                    <p class="mt-3 text-muted w-lg-75">Create your 10 th of Ramadan Archive System account to manage access and enjoy the
                                         full admin experience.</p>
                                 </div>
 
