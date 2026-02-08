@@ -164,7 +164,7 @@
         @endforeach
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="{{ asset('vendor/jsbarcode/JsBarcode.all.min.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             @foreach($client->files as $file)

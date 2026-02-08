@@ -271,11 +271,11 @@
 }
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="{{ asset('vendor/pdfjs/pdf.min.js') }}"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof pdfjsLib !== 'undefined') {
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '{{ asset('vendor/pdfjs/pdf.worker.min.js') }}';
     }
 
     const addFileUsedRanges = {};
@@ -408,6 +408,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             const scale = containerWidth / viewport.width;
                             const scaledViewport = page.getViewport({ scale: scale });
                             canvas.height = scaledViewport.height;
+                            canvas.style.height = '100%';
                             canvas.width = scaledViewport.width;
                             page.render({ canvasContext: context, viewport: scaledViewport });
                             canvas.classList.remove('d-none');
