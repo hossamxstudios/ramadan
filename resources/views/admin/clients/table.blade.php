@@ -105,11 +105,11 @@
                         @endif
                         <td rowspan="{{ $filesCount > 0 ? $filesCount : 1 }}" class="text-center">
                             <div class="gap-1 d-flex justify-content-center">
-                                @can('clients.create')
+                                {{-- @can('clients.create')
                                 <button type="button" class="px-2 text-white btn btn-icon btn-sm bg-primary" title="إضافة ملف" data-bs-toggle="modal" data-bs-target="#addFileModal_{{ $client->id }}">
                                     <i class="ti ti-file-plus fs-5"></i>
                                 </button>
-                                @endcan
+                                @endcan --}}
                                 <button type="button" class="px-2 btn btn-icon btn-sm bg-primary-subtle text-primary" title="طباعة" data-bs-toggle="modal" data-bs-target="#printBarcodeModal_{{ $client->id }}">
                                     <i class="ti ti-printer fs-5"></i>
                                 </button>
