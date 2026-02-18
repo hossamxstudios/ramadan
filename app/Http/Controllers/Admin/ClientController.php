@@ -332,7 +332,7 @@ class ClientController extends Controller
         $clients = Client::with(['files' => function ($q) {
             $q->whereNull('parent_id')
               ->whereNotNull('barcode')
-              ->with(['land.district', 'land.zone', 'land.area', 'room', 'lane', 'stand', 'rack']);
+              ->with(['land.district', 'land.sector', 'land.area', 'room', 'lane', 'stand', 'rack']);
         }])->whereIn('id', $request->client_ids)->get();
 
         $data = [];
@@ -341,10 +341,10 @@ class ClientController extends Controller
                 if ($file->barcode) {
                     $geo = $file->land
                         ? collect([
-                            $file->land->district?->name,
-                            $file->land->zone?->name,
-                            $file->land->area?->name,
-                            $file->land->land_no ? 'أرض ' . $file->land->land_no : null
+                            $file->land->district?->name ? '(حي : ' . $file->land->district->name . ')' : null,
+                            $file->land->area?->name ? '(مجاوره : ' . $file->land->area->name . ')' : null,
+                            $file->land->sector?->name ? '(قطاع : ' . $file->land->sector->name . ')' : null,
+                            $file->land->land_no ? '(قطعة : ' . $file->land->land_no . ')' : null
                         ])->filter()->implode(' - ')
                         : '-';
 
